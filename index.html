@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Productos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gestión de Productos</h1>
+  <form id="product-form">
+    <label for="name">Nombre del producto:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="price">Precio:</label>
+    <input type="number" id="price" name="price" required>
+    <br>
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br>
+    <label for="image">Imagen del producto:</label>
+    <input type="file" id="image" name="image" accept="image/*">
+    <br>
+    <button type="submit">Agregar Producto</button>
+  </form>
+
+  <h2>Lista de Productos</h2>
+  <div style="text-align: center; margin: 20px 0;">
+    <button id="test-connection" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-right: 10px;">Probar Conexión Firebase</button>
+    <button id="refresh-products" style="background: #17a2b8; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-right: 10px;">Actualizar Lista</button>
+    <button id="test-api-key" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-right: 10px;">Validar API ImgBB</button>
+    <button id="test-image-upload" style="background: #ffc107; color: black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Probar Subida de Imagen</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody id="product-list">
+      <!-- Aquí se mostrarán los productos -->
+    </tbody>
+  </table>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

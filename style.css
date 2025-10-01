@@ -1,0 +1,108 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  background: #fff;
+  max-width: 400px;
+  margin: 30px auto 20px auto;
+  padding: 24px 32px 18px 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+  padding: 8px 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9fafb;
+  margin-bottom: 8px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+form button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #2563eb;
+}
+
+/* Tabla de productos */
+table {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+thead {
+  background: #4f8cff;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e3e8ee;
+  text-align: center;
+  color: #444;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 700px) {
+  form, table {
+    width: 98%;
+    padding: 0;
+  }
+  form {
+    max-width: 98%;
+  }
+  table {
+    font-size: 0.95rem;
+  }
+}
